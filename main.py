@@ -7,9 +7,9 @@ import pyshorteners
 from tkinter import *
 
 root = Tk()
-root.geometry("400x200")
+root.geometry("400x210")
 root.title("URL Shortener")
-root.configure(bg="#49A")
+root.configure(bg="#d4ebf2")
 
 url = StringVar()
 url_address = StringVar()
@@ -26,10 +26,10 @@ def copyURL():
     pyperclip.copy(urlShort)
 
 # Set GUI
-Label(root, text="My URL Shortener", font="poppins").pack(pady=10)
-Entry(root, textvariable=url).pack(pady=5)
+Label(root, text="URL Shortener", font="poppins", background="#d4ebf2").pack(pady=8)
+Entry(root, textvariable=url, width=50, justify="center").pack(pady=10)
 Button(root, text="Generate Short URL", command=urlShortener).pack(pady=7)
-Entry(root, textvariable=url_address).pack(pady=5)
+Entry(root, textvariable=url_address, width=50, justify="center", fg="#ff0000").pack(pady=5)
 Button(root, text="Copy URL", command=copyURL).pack(pady=5)
 
 root.mainloop()
