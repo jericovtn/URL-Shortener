@@ -20,3 +20,8 @@ def urlShortener():
     urlShort = pyshorteners.Shortener().tinyurl.short(urlAddress)
     urlAddress.set(urlShort)
 
+# Copy URL Method
+def copyURL():
+    urlShort = urlAddress.get()
+    pyperclip.copy(urlShort)
+
