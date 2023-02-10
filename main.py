@@ -25,3 +25,10 @@ def copyURL():
     urlShort = urlAddress.get()
     pyperclip.copy(urlShort)
 
+# Set GUI
+Label(root, text="My URL Shortener", font="poppins").pack(pady=10)
+Entry(root, textvariable=url).pack(pady=5)
+Button(root, text="Generate Short URL", command=urlShortener).pack(pady=7)
+Entry(root, textvariable=urlAddress).pack(pady=5)
+Button(root, text="Copy URL", command=copyURL).pack(pady=5)
+
