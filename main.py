@@ -32,3 +32,4 @@ Button(root, text="Generate Short URL", command=urlShortener).pack(pady=7)
 Entry(root, textvariable=urlAddress).pack(pady=5)
 Button(root, text="Copy URL", command=copyURL).pack(pady=5)
 
+root.mainloop()
