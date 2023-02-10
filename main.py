@@ -14,3 +14,9 @@ root.configure(bg="#49A")
 url = StringVar()
 urlAddress = StringVar()
 
+# URL Shortener Method
+def urlShortener():
+    urlAddress = url.get()
+    urlShort = pyshorteners.Shortener().tinyurl.short(urlAddress)
+    urlAddress.set(urlShort)
+
